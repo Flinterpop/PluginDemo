@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\source\pluginTest\Project1\x64\Debug\Project1.exe</FullPath>
+      <FullPath>C:\source\gitInternal\PluginDemo\Project1\x64\Debug\Project1.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

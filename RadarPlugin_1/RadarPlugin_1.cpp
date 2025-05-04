@@ -13,6 +13,7 @@ const char* get_PlugInName() {
 }
 
 MyObject* MyObject_ctor() {
+    puts(">>>>>>>>>>>>>>>In MyObject_ctor");
     auto ptr = new MyObject();
     ptr->Id = "Id_01";
     ptr->Length = 15;

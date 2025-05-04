@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\source\pluginTest\Project1\x64\Debug\RadarPlugin_2.dll</FullPath>
+      <FullPath>C:\source\gitInternal\PluginDemo\Project1\x64\Debug\RadarPlugin_2.dll</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

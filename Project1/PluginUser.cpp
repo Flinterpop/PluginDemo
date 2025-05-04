@@ -13,6 +13,12 @@ typedef void (WINAPIV* MyObject_CopyTo_func)(MyObject*, MyObject*);
 typedef const char* (WINAPIV* MyObject_get_Id_func)(MyObject*);
 typedef void* (WINAPIV* MyObject_get_Data_func)(MyObject*);
 
+
+#include <vector>
+
+std::vector<HINSTANCE> pluginList;
+
+
 /// <summary>
 ///     Gets a human-readable copy of the data
 /// </summary>
@@ -74,11 +80,11 @@ int main(int argc, char** argv) {
     LPCWSTR sw = stemp.c_str();
     HANDLE fileHandle = FindFirstFile(sw, &fileData);
 
-    if (fileHandle == (HANDLE)ERROR_INVALID_HANDLE ||
-        fileHandle == (HANDLE)ERROR_FILE_NOT_FOUND) {
-        printf("No PlugIns found\n"); \
-            printf("\n\nPress any key to exit...\n"); \
-            getchar();
+    if (fileHandle == (HANDLE)ERROR_INVALID_HANDLE || fileHandle == (HANDLE)ERROR_FILE_NOT_FOUND) 
+    {
+        printf("No PlugIns found\n"); 
+        printf("\n\nPress any key to exit...\n"); 
+        getchar();
         return EXIT_FAILURE;
     }
     path = ExePath() + "\\";
@@ -90,18 +96,19 @@ int main(int argc, char** argv) {
             std::string fullPath = path + st;
             stemp = std::wstring(fullPath.begin(), fullPath.end());
             LPCWSTR swt = stemp.c_str();
-            HINSTANCE temp = LoadLibrary(swt);
 
-            if (!temp || temp == NULL) {
+            HINSTANCE h_Plugin = LoadLibrary(swt);
+
+            if (!h_Plugin || h_Plugin == NULL) {
                 continue; // could not load
             }
 
-            auto get_PlugInName_process = GetProcAddress(temp, "get_PlugInName");
-            auto MyObject_ctor_process = GetProcAddress(temp, "MyObject_ctor");
-            auto MyObject_Dispose_process = GetProcAddress(temp, "MyObject_Dispose");
-            auto MyObject_CopyTo_process = GetProcAddress(temp, "MyObject_CopyTo");
-            auto MyObject_get_Id_process = GetProcAddress(temp, "MyObject_get_Id");
-            auto MyObject_get_Data_process = GetProcAddress(temp, "MyObject_get_Data");
+            FARPROC get_PlugInName_process = GetProcAddress(h_Plugin, "get_PlugInName");
+            FARPROC MyObject_ctor_process = GetProcAddress(h_Plugin, "MyObject_ctor");
+            FARPROC MyObject_Dispose_process = GetProcAddress(h_Plugin, "MyObject_Dispose");
+            FARPROC MyObject_CopyTo_process = GetProcAddress(h_Plugin, "MyObject_CopyTo");
+            FARPROC MyObject_get_Id_process = GetProcAddress(h_Plugin, "MyObject_get_Id");
+            FARPROC MyObject_get_Data_process = GetProcAddress(h_Plugin, "MyObject_get_Data");
 
             if (get_PlugInName_process == NULL ||
                 MyObject_ctor_process == NULL ||
@@ -111,21 +118,31 @@ int main(int argc, char** argv) {
                 MyObject_get_Data_process == NULL) {
 
                 // could not get process
-                FreeLibrary(temp);
+                FreeLibrary(h_Plugin);
                 continue;
             }
+
+
+
+            pluginList.push_back(h_Plugin);
+
             printf("Loaded %s\n", st.c_str());
             printf("PlugIn Name:      %s\n", ((get_PlugInName_func)get_PlugInName_process)());
+            MyObject *ptr = ((MyObject_ctor_func)MyObject_ctor_process)();
 
-            auto ptr = ((MyObject_ctor_func)MyObject_ctor_process)();
+
             printf("Object Id:        %s\n", ((MyObject_get_Id_func)MyObject_get_Id_process)(ptr));
             printf("   Length:        %d\n", ptr->Length);
-            auto data = GetDataString(ptr);
-            printf("     Data:        %s\n", data);
-            free(data);
-            ((MyObject_Dispose_func)MyObject_Dispose_process)(ptr);
 
-            FreeLibrary(temp);
+
+            char *data = GetDataString(ptr);
+            printf("     Data:        %s\n", data);
+
+
+
+            free(data);
+            //((MyObject_Dispose_func)MyObject_Dispose_process)(ptr);
+            //FreeLibrary(h_Plugin);
 
             loaded++;
         }
@@ -137,6 +154,21 @@ int main(int argc, char** argv) {
 
     printf("\n\nPress any key to exit...\n");
     getchar();
+    for (auto v : pluginList)
+    {
+        FARPROC MyObject_ctor_process = GetProcAddress(v, "MyObject_ctor");
+        MyObject* ptr = ((MyObject_ctor_func)MyObject_ctor_process)();
+
+
+
+        FARPROC MyObject_Dispose_process = GetProcAddress(v, "MyObject_Dispose");
+        ((MyObject_Dispose_func)MyObject_Dispose_process)(ptr);
+        FreeLibrary(v);
+    }
+        
+    getchar();
+
+
     return loaded > 0 ? EXIT_SUCCESS : EXIT_FAILURE;
 }
 

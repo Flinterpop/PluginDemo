@@ -9,10 +9,12 @@
 #include <string> /* provides malloc and free */
 
 const char* get_PlugInName() {
+    puts(">>>>>>>>>>>>>>>In get_PlugInName 2");
     return "SamplePlugIn_02";
 }
 
 MyObject* MyObject_ctor() {
+    puts(">>>>>>>>>>>>>>>In MyObject_ctor");
     auto ptr = new MyObject();
     ptr->Id = "Id_02";
     ptr->Length = 10;
