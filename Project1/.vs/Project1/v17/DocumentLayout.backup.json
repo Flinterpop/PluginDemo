@@ -3,18 +3,24 @@
   "WorkspaceRootPath": "C:\\source\\gitInternal\\PluginDemo\\Project1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C943DD5B-1B12-4FF9-B903-A321F9BF3BE5}|..\\RadarPlugin_2\\RadarPlugin_2.vcxproj|C:\\source\\gitInternal\\PluginDemo\\RadarPlugin_2\\RadarPlugin_2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{6382BCE8-7FE1-4EFC-B973-97B884C06F24}|Project1.vcxproj|C:\\source\\gitInternal\\PluginDemo\\Project1\\PluginUser.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{6382BCE8-7FE1-4EFC-B973-97B884C06F24}|Project1.vcxproj|solutionrelative:PluginUser.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6D53854A-410E-4088-B315-43DCAC0DB80B}|..\\RadarPlugin_1\\RadarPlugin_1.vcxproj|C:\\source\\gitInternal\\PluginDemo\\RadarPlugin_1\\RadarPlugin_1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\source\\gitInternal\\PluginDemo\\RadarPlugin_2\\ADSBPlugin.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D53854A-410E-4088-B315-43DCAC0DB80B}|..\\RadarPlugin_1\\RadarPlugin_1.vcxproj|C:\\source\\gitInternal\\PluginDemo\\RadarPlugin_1\\POIPlugin.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C943DD5B-1B12-4FF9-B903-A321F9BF3BE5}|..\\RadarPlugin_2\\RadarPlugin_2.vcxproj|C:\\SOURCE\\GITINTERNAL\\PLUGINDEMO\\PROJECT1\\PLUGINAPI.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{C943DD5B-1B12-4FF9-B903-A321F9BF3BE5}|..\\RadarPlugin_2\\RadarPlugin_2.vcxproj|solutionrelative:PLUGINAPI.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6382BCE8-7FE1-4EFC-B973-97B884C06F24}|Project1.vcxproj|C:\\source\\gitInternal\\PluginDemo\\Project1\\PluginUser.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6382BCE8-7FE1-4EFC-B973-97B884C06F24}|Project1.vcxproj|solutionrelative:PluginUser.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{6D53854A-410E-4088-B315-43DCAC0DB80B}|..\\RadarPlugin_1\\RadarPlugin_1.vcxproj|C:\\source\\gitInternal\\PluginDemo\\RadarPlugin_1\\RadarPlugin_1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C943DD5B-1B12-4FF9-B903-A321F9BF3BE5}|..\\RadarPlugin_2\\RadarPlugin_2.vcxproj|C:\\source\\gitInternal\\PluginDemo\\RadarPlugin_2\\RadarPlugin_2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -24,30 +30,30 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "PlugInApi.h",
-              "DocumentMoniker": "C:\\source\\gitInternal\\PluginDemo\\Project1\\PlugInApi.h",
-              "RelativeDocumentMoniker": "PlugInApi.h",
-              "ToolTip": "C:\\source\\gitInternal\\PluginDemo\\Project1\\PlugInApi.h",
-              "RelativeToolTip": "PlugInApi.h",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABgAAAAPAAAAAAAAAA==",
+              "Title": "POIPlugin.h",
+              "DocumentMoniker": "C:\\source\\gitInternal\\PluginDemo\\RadarPlugin_1\\POIPlugin.h",
+              "RelativeDocumentMoniker": "..\\RadarPlugin_1\\POIPlugin.h",
+              "ToolTip": "C:\\source\\gitInternal\\PluginDemo\\RadarPlugin_1\\POIPlugin.h",
+              "RelativeToolTip": "..\\RadarPlugin_1\\POIPlugin.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-05-04T15:34:42.311Z",
+              "WhenOpened": "2025-05-04T19:41:59.819Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "PluginUser.cpp",
               "DocumentMoniker": "C:\\source\\gitInternal\\PluginDemo\\Project1\\PluginUser.cpp",
               "RelativeDocumentMoniker": "PluginUser.cpp",
               "ToolTip": "C:\\source\\gitInternal\\PluginDemo\\Project1\\PluginUser.cpp",
               "RelativeToolTip": "PluginUser.cpp",
-              "ViewState": "AgIAABgAAAAAAAAAAAAnwEgAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAABwAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-02-26T22:07:43.592Z",
               "EditorCaption": ""
@@ -55,25 +61,51 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "ADSBPlugin.h",
+              "DocumentMoniker": "C:\\source\\gitInternal\\PluginDemo\\RadarPlugin_2\\ADSBPlugin.h",
+              "RelativeDocumentMoniker": "..\\RadarPlugin_2\\ADSBPlugin.h",
+              "ToolTip": "C:\\source\\gitInternal\\PluginDemo\\RadarPlugin_2\\ADSBPlugin.h",
+              "RelativeToolTip": "..\\RadarPlugin_2\\ADSBPlugin.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-04T19:11:16.954Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PlugInApi.h",
+              "DocumentMoniker": "C:\\source\\gitInternal\\PluginDemo\\Project1\\PlugInApi.h",
+              "RelativeDocumentMoniker": "PlugInApi.h",
+              "ToolTip": "C:\\source\\gitInternal\\PluginDemo\\Project1\\PlugInApi.h",
+              "RelativeToolTip": "PlugInApi.h",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAABAAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-04T15:34:42.311Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "RadarPlugin_1.cpp",
               "DocumentMoniker": "C:\\source\\gitInternal\\PluginDemo\\RadarPlugin_1\\RadarPlugin_1.cpp",
               "RelativeDocumentMoniker": "..\\RadarPlugin_1\\RadarPlugin_1.cpp",
               "ToolTip": "C:\\source\\gitInternal\\PluginDemo\\RadarPlugin_1\\RadarPlugin_1.cpp",
               "RelativeToolTip": "..\\RadarPlugin_1\\RadarPlugin_1.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-05-04T15:29:09.217Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "RadarPlugin_2.cpp",
               "DocumentMoniker": "C:\\source\\gitInternal\\PluginDemo\\RadarPlugin_2\\RadarPlugin_2.cpp",
               "RelativeDocumentMoniker": "..\\RadarPlugin_2\\RadarPlugin_2.cpp",
               "ToolTip": "C:\\source\\gitInternal\\PluginDemo\\RadarPlugin_2\\RadarPlugin_2.cpp",
               "RelativeToolTip": "..\\RadarPlugin_2\\RadarPlugin_2.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-05-04T12:09:31.379Z",
               "EditorCaption": ""

@@ -2,19 +2,15 @@
 #define WIN32_LEAN_AND_MEAN             // Exclude rarely-used stuff from Windows headers
 #include <windows.h>
 
-
-// SamplePlugIn.cpp
-#include  "PlugInApi.h"
+#include "PlugInApi.h"
+#include "POIPlugin.h"
 #include <stddef.h> /* provides NULL */
 
 
-MapPlugin* MapPlugin_ctor() 
+MapPlugin* MapPlugin_ctor()
 {
-    MapPlugin *ptr = new MapPlugin("Id_01");
-    return ptr;
+    POIPlugin* ptr2 = new POIPlugin("Id_03");
+    return ptr2;
 }
-
-
-
 
 

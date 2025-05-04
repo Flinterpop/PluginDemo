@@ -22,19 +22,20 @@ extern "C" {
         public:
         const char* Id =0;
 
-        void pme(const char* str)
+        virtual void pme(const char* str)
         {
-            printf("Here in member pme for %s\r\n%s\r\n", Id, str);
+            printf("MapPlugin (%s) pme\r\n%s\r\n", Id, str);
         };
+
         MapPlugin(const char * _Id)
         {
             Id = _Id;
-            printf("In Constructor for %s\r\n",Id);
+            printf("In MapPlugin Constructor for %s\r\n",Id);
         };
 
         ~MapPlugin()
         {
-            printf("In Destructor for %s\r\n", Id);
+            printf("In MapPlugin Destructor for %s\r\n", Id);
         };
 
     };

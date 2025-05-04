@@ -94,6 +94,8 @@ int LoadAllPlugins()
             stemp = std::wstring(fullPath.begin(), fullPath.end());
             LPCWSTR swt = stemp.c_str();
 
+            printf("Loading Plugin: %s\r\n", st.c_str());
+
             HINSTANCE h_Plugin = LoadLibrary(swt);
 
             if (!h_Plugin || h_Plugin == NULL) {
