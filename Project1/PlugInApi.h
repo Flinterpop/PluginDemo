@@ -16,59 +16,41 @@
 extern "C" {
 #endif
 
-    struct MyObject {
-        unsigned int Length;
-        const char* Id;
-        void* Data;
-    };
+    #include "stdio.h"
+    
+    class MapPlugin {
+        public:
+        const char* Id =0;
 
-    /**
-     * Gets the name of the PlugIn
-     * @return a character array
-     */
-    API const char* get_PlugInName();
+        void pme(const char* str)
+        {
+            printf("Here in member pme for %s\r\n%s\r\n", Id, str);
+        };
+        MapPlugin(const char * _Id)
+        {
+            Id = _Id;
+            printf("In Constructor for %s\r\n",Id);
+        };
+
+        ~MapPlugin()
+        {
+            printf("In Destructor for %s\r\n", Id);
+        };
+
+    };
+    
 
     /**
      * Initializes an object
      * @return a pointer to the object
      */
-    API MyObject* MyObject_ctor();
+    API MapPlugin* MapPlugin_ctor();
 
-    /**
-     * Copies the object (very shallow)
-     * @param ptr a pointer to the object
-     * @param other a pointer another object
-     * @return a MyObject
-     */
-    API void MyObject_CopyTo(MyObject* ptr, MyObject* other);
 
-    /**
-     * Disposes of the object
-     * @param ptr a pointer to the object
-     * @return void
-     */
-    API void MyObject_Dispose(MyObject* ptr);
+    // Define the functions a PlugIn should have
+    typedef MapPlugin* (WINAPIV* MyObject_ctor_func)();
+    
 
-    /**
-     * Gets the object's ID
-     * @param ptr a pointer to the object
-     * @return a character array
-     */
-    API const char* MyObject_get_Id(MyObject* ptr);
-
-    /**
-     * Gets a pointer to the object data
-     * @param ptr a pointer to the object
-     * @return a byte array
-     */
-    API void* MyObject_get_Data(MyObject* ptr);
-
-    /**
-     * Gets the last error/debug message on the object
-     * @param ptr a pointer to the object
-     * @return a character array
-     */
-    API const char* MyObject_get_Message(MyObject* ptr);
 
 #ifdef __cplusplus
 }
